@@ -9,4 +9,6 @@ class User < ApplicationRecord
   has_many :friendships2, class_name: 'Friendship', foreign_key: 'user2_id'
 
   has_many :friends, through: :friendships1, source: :user2
+
+  has_one_attached :avatar
 end
